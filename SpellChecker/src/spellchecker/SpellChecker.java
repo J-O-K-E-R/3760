@@ -5,11 +5,8 @@
  */
 package spellchecker;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -81,7 +78,8 @@ public class SpellChecker {
         }
         long stopTime1 = System.currentTimeMillis();
         long elapsedTime1 = stopTime1 - startTime1;
-        System.out.println("Sequential Search: " + seq + " words are not found " + elapsedTime1 * 1000 + " Microsecond");
+        System.out.println("Sequential Search: ");
+        System.out.println(seq + " words are not found " + elapsedTime1 * 1000 + " Microsecond");
 
         long startTime2 = System.currentTimeMillis();
         for (int i = 0; i < text2.length; i++) {
@@ -91,7 +89,8 @@ public class SpellChecker {
         }
         long stopTime2 = System.currentTimeMillis();
         long elapsedTime2 = stopTime2 - startTime2;
-        System.out.println("Binary Search: " + bin + " words are not found " + elapsedTime2 * 1000 + " Microsecond");
+        System.out.println("Binary Search: ");
+        System.out.println(bin + " words are not found " + elapsedTime2 * 1000 + " Microsecond");
     }
 
 }
